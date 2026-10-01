@@ -1,0 +1,77 @@
+/* MuseOffice global styles.
+ *
+ * The workspace theme is fully owned by components/tools/tools.module.css
+ * (.surface scope). This file carries only the document-level baseline the
+ * workspace assumes: border-box sizing, UA margin resets, transparent button
+ * faces, and the font variables mounted by app/layout.tsx. It intentionally
+ * mirrors the relevant Tailwind preflight rules (MuseOffice uses no Tailwind
+ * classes) so the extracted workspace renders exactly as it did inside
+ * MyOffice. Do not add product styling here — it belongs in the module CSS.
+ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f5;
+  color: #1b2923;
+  font-family: var(--font-body), Inter, ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, p, dl, dd, figure, blockquote, pre {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  background-color: transparent;
+  background-image: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+img, svg, video {
+  display: block;
+  vertical-align: middle;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+[hidden] {
+  display: none !important;
+}
